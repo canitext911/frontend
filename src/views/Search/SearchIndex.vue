@@ -4,7 +4,7 @@
       <Input v-model="search"
              ref="SearchInput"
              @keydown.enter.native="handleSubmit"
-             placeholder="Search by city, county, state abbreviation, or zip code..."
+             :placeholder="inputPlaceholder"
              class="cit-search-index__form-input"/>
       <Button class="cit-search-index__form-button"
               @click="handleSubmit">
@@ -27,7 +27,13 @@ export default {
   data() {
     return {
       search: '',
+      windowWidth: window.innerWidth,
     };
+  },
+  computed: {
+    inputPlaceholder() {
+      return this.windowWidth > 600 ? 'Search by city, county, state abbreviation, or zip code...' : 'Search...';
+    },
   },
   methods: {
     handleSubmit() {
@@ -41,6 +47,9 @@ export default {
           search: this.search,
         },
       });
+    },
+    resizeHandler() {
+      this.windowWidth = window.innerWidth;
     },
   },
   watch: {
@@ -61,6 +70,11 @@ export default {
     if (this.search === '') {
       this.$refs.SearchInput.focus();
     }
+
+    window.addEventListener('resize', this.resizeHandler);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.resizeHandler);
   },
   metaInfo: {
     title: 'Search',
@@ -87,13 +101,13 @@ export default {
       margin-left: 1rem;
     }
 
-    @media all and (max-width: $cit-breakpoint-small) {
+    @media all and (max-width: $cit-breakpoint-medium) {
       flex-wrap: wrap;
       margin: 1rem 0;
 
       &-input,
       &-button {
-        flex: 1 1 auto;
+        flex: 1 1 100%;
         margin: .5rem 0;
       }
     }
