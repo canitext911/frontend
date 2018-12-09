@@ -5,6 +5,9 @@
            :autofocus="isAutofocused"
            :required="isRequired"
            :name="name"
+           :min="min"
+           :max="max"
+           :maxlength="maxlength"
            :aria-label="ariaLabel"
            :tabindex="tabindex"
            :value="value"
@@ -33,6 +36,18 @@ export default {
     type: {
       type: String,
       default: 'text',
+    },
+    min: {
+      type: Number,
+      default: null,
+    },
+    max: {
+      type: Number,
+      default: null,
+    },
+    maxlength: {
+      type: Number,
+      default: null,
     },
     ariaLabel: {
       type: String,

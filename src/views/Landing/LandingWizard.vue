@@ -27,14 +27,15 @@
       <StepperStep class="cit-landing-wizard__step"
                    title="Enter Your Zip Code"
                    nextActionText="Check Availability"
-                   :hasNext="zipCode !== ''"
+                   :hasNext="isFormValid"
                    hasPrev
                    @prev="handlePrevStep"
                    @next="handleSearch">
         <Input placeholder="Enter your ZIP code..."
                type="number"
                :tabindex="-1"
-               isRequired
+               :min="0"
+               :max="99999"
                ariaLabel="Enter ZIP code"
                ref="ZipInput"
                class="cit-landing-wizard__zip-input"
@@ -67,15 +68,24 @@ export default {
   },
   Carrier,
   CarrierPlanStatus,
+  computed: {
+    isFormValid() {
+      const parsedZip = Number.parseInt(this.zipCode, 10);
+      return this.carrier !== null
+        && this.carrierPlanStatus !== null
+        && this.zipCode.length === 5
+        && !Number.isNaN(parsedZip)
+        && parsedZip >= 0
+        && parsedZip <= 99999
+        && this.zipCode.length === 5;
+    },
+  },
   methods: {
     handleNextStep() {
       this.currentStep += 1;
     },
     handlePrevStep() {
       this.currentStep -= 1;
-    },
-    isFormValid() {
-      return this.zipCode !== '' && this.carrier !== null && this.carrierPlanStatus !== null;
     },
     handleSearch() {
       if (this.isFormValid) {
