@@ -1,7 +1,9 @@
 <template>
   <Card :class="['cit-check-card', classList]">
     <div class="cit-check-card__check">
-      <Icon :icon="icon" size="large"/>
+      <Icon :icon="icon"
+            size="large"
+            class="cit-check-card__icon"/>
     </div>
     <div class="cit-check-card__content">
       <div class="cit-check-card__title">
@@ -45,6 +47,12 @@ export default {
   padding: 2rem;
   display: flex;
   align-items: center;
+
+  // icon can't transition when swapping icon, so remove transition altogether
+  &__check,
+  &__icon {
+    transition: none;
+  }
 
   &__check {
     height: 3rem;

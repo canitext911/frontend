@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   transition: $cit-transition-default;
-  transition-property: opacity, visibility, box-shadow, color, transform, background-color;
+  transition-property: opacity, visibility, box-shadow, color, transform, background-color, border-color;
 }
 
 ::selection {
