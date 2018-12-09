@@ -12,3 +12,17 @@ new Vue({
   render: h => h(App),
   router,
 });
+
+
+/**
+ * Google Analytics
+ */
+/* eslint-disable */
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+gtag('config', 'UA-130662794-1');
