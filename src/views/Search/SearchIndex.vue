@@ -45,7 +45,9 @@ export default {
           ...this.$route.query,
         },
         params: {
-          search: this.search,
+          // vue-router optional params doesn't allow a blank parameter,
+          // just none at all or one with a value
+          ...(this.search !== '' ? { search: this.search } : {}),
         },
       });
     },

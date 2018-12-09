@@ -38,7 +38,7 @@ const router = new Router({
       component: SearchIndex,
       children: [
         {
-          path: 'results/:search',
+          path: 'results/:search?',
           name: RouteNames.Search.Result,
           props: route => ({
             search: route.params.search,

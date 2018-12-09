@@ -6,7 +6,9 @@
       <a @click="handleSearch">try again</a>.
     </template>
     <template v-else>
-      <SearchResultWizard :hasSearchResults="hasResults"/>
+      <SearchResultWizard
+          v-if="!isBlankSearch"
+          :hasSearchResults="hasResults"/>
       <template v-if="hasResults">
         <SubHeader>
           Search Results
@@ -72,6 +74,9 @@ export default {
     },
     hasResults() {
       return this.visibleResults > 0;
+    },
+    isBlankSearch() {
+      return this.search === '';
     },
   },
   methods: {
