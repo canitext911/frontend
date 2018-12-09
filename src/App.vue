@@ -1,57 +1,185 @@
 <template>
-  <div id="app">
-    <h1>Can I Text 911?</h1>
-    <p>
-      Coming Soon
-    </p>
-    <p>
-      <Button @click="handleRegistry">View FCC Registry</Button>
-    </p>
-    <p>
-      <small>Questions? Email support@shengslogar.com</small>
-    </p>
+  <div class="cit-app">
+    <ContentWrapper class="cit-app__header">
+      <div class="cit-app__logo">
+        <router-link :to="{ name: $options.RouteNames.Landing.Index }">
+          CANiTEXT<strong>911</strong>
+        </router-link>
+      </div>
+      <div class="cit-app__menu-open">
+        <Icon icon="menu" size="large"
+              @click.native="handleMenuOpen"/>
+      </div>
+      <div :class="['cit-app__menu', menuClassList]">
+        <div class="cit-app__menu-close">
+          <Icon icon="close" size="large"
+                @click.native="handleMenuClose"/>
+        </div>
+        <router-link :to="{ name: $options.RouteNames.Search.Index }"
+                     @click.native="handleMenuClose">
+          Search
+        </router-link>
+        <router-link :to="{ name: $options.RouteNames.Faq.Index }"
+                     @click.native="handleMenuClose">
+          FAQ
+        </router-link>
+        <router-link :to="{ name: $options.RouteNames.Support.Index }"
+                     @click.native="handleMenuClose">
+          Contact
+        </router-link>
+      </div>
+    </ContentWrapper>
+    <div class="cit-app__view">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-import Button from '@/components/Button';
+import RouteNames from '@/router/names';
+import ContentWrapper from '@/components/ContentWrapper';
+import Icon from './components/Icon';
 
 export default {
   name: 'App',
-  methods: {
-    handleRegistry() {
-      window.open('https://www.fcc.gov/files/text-911-master-psap-registryxlsx');
+  RouteNames,
+  data() {
+    return {
+      isMobileMenuOpen: false,
+    };
+  },
+  computed: {
+    menuClassList() {
+      return {
+        'cit-app__menu--open': this.isMobileMenuOpen,
+      };
     },
   },
-  components: { Button },
+  methods: {
+    handleMenuOpen() {
+      this.isMobileMenuOpen = true;
+    },
+    handleMenuClose() {
+      this.isMobileMenuOpen = false;
+    },
+  },
+  metaInfo: {
+    title: 'United States',
+    titleTemplate: 'Can I Text 911 - %s',
+    meta: [
+      { name: 'description', content: 'Find out if texting 911 is supported in your area.' },
+    ],
+  },
+  components: { Icon, ContentWrapper },
 };
 </script>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+<style lang="scss">
+@import '~@scss/app.scss';
 
-body {
-  font: 16px Oxygen, sans-serif;
-  height: 100vh;
-  margin: 0;
-  cursor: default;
-  color: #444;
-}
-
-h1 {
-  font-size: 4rem;
-  margin: 0;
-  color: #000;
-}
-
-#app {
+.cit-app {
+  height: 100%;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  display: flex;
-  min-height: 100%;
-  width: 100%;
+
+  &__header {
+    flex: 0 0 auto;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid $cit-light-gray;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    @media all and (max-width: $cit-breakpoint-medium) {
+      padding: 1.5rem .5rem 1.5rem 1rem !important;
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    flex: 1 1 auto;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    a {
+      color: $cit-dark-black;
+    }
+
+    strong {
+      color: $cit-red;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      margin: 0 1rem;
+      color: $cit-black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media all and (max-width: $cit-breakpoint-medium) {
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      background: $cit-white;
+      overflow: auto;
+      pointer-events: none;
+
+      a {
+        margin: 2rem 0;
+      }
+
+      &--open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__menu-open,
+  &__menu-close {
+    display: none;
+
+    @media all and (max-width: $cit-breakpoint-medium) {
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+
+  &__menu-close {
+    position: fixed;
+    top: 1.5rem;
+    right: .5rem;
+  }
+
+  &__view {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    min-width: 0;
+    overflow: auto;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 </style>

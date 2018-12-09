@@ -1,0 +1,36 @@
+@import '~@scss/index.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  transition: $cit-transition-default;
+  transition-property: opacity, visibility, box-shadow, color, transform, background-color;
+}
+
+::selection {
+  background: $cit-dark-gray;
+  color: $cit-white;
+}
+
+p {
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  color: $cit-blue;
+}
+
+body {
+  font: 16px Oxygen, sans-serif;
+  height: 100vh;
+  margin: 0;
+  cursor: default;
+  color: $cit-black;
+  overflow: hidden;
+  background: $cit-white-gray;
+  min-width: 320px;
+}
