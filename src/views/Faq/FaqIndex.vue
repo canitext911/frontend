@@ -17,7 +17,7 @@
       The FCC requires all wireless carriers to support this service. Verizon, AT&amp;T,
       Sprint, and T-Mobile have indicated support. However, your local emergency call center
       must also have this technology deployed. You may be able to determine some of this
-      information through our website, but always check with your provider or local call center
+      information through our website, but always check with your carrier or local call center
       to confirm support.
     </p>
     <h3>Do I need an active phone plan?</h3>
@@ -46,7 +46,7 @@
     </p>
     <h3>Who runs this website?</h3>
     <p>
-      CIT911 is an independently-run informational website and is not affiliated
+      CANiTEXT911 is an independently-run informational website and is not affiliated
       with any government entity. Our goal is to raise awareness and increase public safety.
     </p>
   </ContentWrapper>

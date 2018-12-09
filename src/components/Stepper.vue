@@ -48,7 +48,8 @@ export default {
   &__carousel {
     display: flex;
     align-items: center;
-    transition: $cit-transition-default;
+    will-change: transform;
+    transition: transform $cit-transition-medium;
   }
 }
 </style>

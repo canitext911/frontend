@@ -122,6 +122,11 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      border-bottom: 1px dashed transparent;
+
+      &.cit-link--active {
+        border-bottom-color: $cit-black;
+      }
     }
 
     @media all and (max-width: $cit-breakpoint-medium) {
