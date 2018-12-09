@@ -24,6 +24,11 @@ export default {
       });
     },
   },
+  metaInfo: {
+    meta: [
+      { name: 'description', content: 'Find out if texting 911 is supported in your area.' },
+    ],
+  },
   components: { Button },
 };
 </script>

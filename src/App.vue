@@ -65,10 +65,7 @@ export default {
   },
   metaInfo: {
     title: 'United States',
-    titleTemplate: 'Can I Text 911 - %s',
-    meta: [
-      { name: 'description', content: 'Find out if texting 911 is supported in your area.' },
-    ],
+    titleTemplate: 'Can I Text 911? - %s',
   },
   components: { Icon, ContentWrapper },
 };
