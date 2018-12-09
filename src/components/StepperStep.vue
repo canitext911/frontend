@@ -1,15 +1,14 @@
 <template>
   <div class="cit-stepper-step">
-    <div class="cit-stepper-step__title">
+    <Subheader class="cit-stepper-step__title">
       {{ title }}
-    </div>
+    </Subheader>
 
     <div class="cit-stepper-step__slot">
       <slot/>
     </div>
 
     <div class="cit-stepper-step__actions">
-
       <!--
            Note on tabindex:
            this is not ideal for accessibility but required
@@ -40,10 +39,11 @@
 </template>
 <script>
 import Button from './Button';
+import Subheader from './SubHeader';
 
 export default {
   name: 'StepperStep',
-  components: { Button },
+  components: { Subheader, Button },
   props: {
     title: {
       type: String,
@@ -72,33 +72,28 @@ export default {
 @import '~@scss/index.scss';
 
 .cit-stepper-step {
-  position: relative;
-  flex: 0 0 100%;
-  padding: 1rem 0;
+  position : relative;
+  flex     : 0 0 100%;
+  padding  : 1rem 0;
 
   &__title {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: $cit-black;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 0 1rem;
+    margin : -1rem 0;
   }
 
   &__slot {
-    padding: 2rem 0 1rem 0;
+    padding : 2rem 0 1rem 0;
   }
 
   &__actions {
-    border-top: 1px solid $cit-light-gray;
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    border-top      : 1px solid $cit-light-gray;
+    padding         : 1rem 0;
+    display         : flex;
+    align-items     : center;
+    justify-content : flex-end;
   }
 
   &__action-divider {
-    color: $cit-gray;
+    color : $cit-gray;
   }
 }
 </style>

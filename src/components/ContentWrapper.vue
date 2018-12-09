@@ -27,16 +27,16 @@ export default {
 @import '~@scss/index.scss';
 
 .cit-content-wrapper {
-  width: 100%;
-  max-width: 1024px;
-  padding: 1rem;
+  width     : 100%;
+  max-width : 1024px;
+  padding   : 1rem;
 
   &--centered {
-    text-align: center;
+    text-align : center;
   }
 
-  @media all and (max-width: $cit-breakpoint-small) {
-    padding: 1rem 0;
+  @media all and (max-width : $cit-breakpoint-small) {
+    padding : 1rem 0;
   }
 }
 </style>

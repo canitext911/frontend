@@ -42,26 +42,26 @@ export default {
 
 .cit-list-select {
   &__item {
-    font-size: 1rem;
-    background: $cit-white;
-    border: 1px solid $cit-light-gray;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    margin: 1rem 0;
-    cursor: pointer;
-    transition: $cit-transition-default;
-    user-select: none;
-    outline: none;
+    font-size     : 1rem;
+    background    : $cit-white;
+    border        : 1px solid $cit-light-gray;
+    padding       : 1rem 2rem;
+    border-radius : 4px;
+    margin        : 1rem 0;
+    cursor        : pointer;
+    transition    : $cit-transition-default;
+    user-select   : none;
+    outline       : none;
 
     &:hover:not(&--selected),
     &:focus:not(&--selected) {
-      background-color: $cit-lighter-gray;
+      background-color : $cit-lighter-gray;
     }
 
     &--selected {
-      color: $cit-white;
-      border-color: $cit-transparent;
-      background-color: $cit-blue;
+      color            : $cit-white;
+      border-color     : $cit-transparent;
+      background-color : $cit-blue;
     }
   }
 }

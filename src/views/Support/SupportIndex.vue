@@ -18,6 +18,9 @@ export default {
   metaInfo: {
     title: 'Contact',
   },
-  components: { Header, ContentWrapper },
+  components: {
+    Header,
+    ContentWrapper,
+  },
 };
 </script>

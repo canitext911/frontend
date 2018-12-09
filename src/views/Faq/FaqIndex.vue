@@ -47,7 +47,12 @@
     <h3>Who runs this website?</h3>
     <p>
       CANiTEXT911 is an independently-run informational website and is not affiliated
-      with any government entity. Our goal is to raise awareness and increase public safety.
+      with any government entity. Our hope is to raise awareness and increase public safety.
+      We're open-source!
+      <a target="_blank"
+         href="https://github.com/CanIText911">
+        Check out this project on Github.
+      </a>
     </p>
   </ContentWrapper>
 </template>
@@ -65,11 +70,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~@scss/index.scss';
+
 .cit-faq-index {
-  padding-bottom: 5rem;
+  padding-bottom : 5rem;
 
   h3 {
-    margin-top: 3rem;
+    margin-top : 3rem;
+    color      : $cit-black;
   }
 }
 </style>

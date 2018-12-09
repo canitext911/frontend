@@ -91,27 +91,27 @@ export default {
 
 .cit-search-index {
   &__form {
-    display: flex;
-    align-items: center;
-    margin: 2rem 0;
+    display     : flex;
+    align-items : center;
+    margin      : 2rem 0;
 
     &-input {
-      flex: 1 1 auto;
+      flex : 1 1 auto;
     }
 
     &-button {
-      flex: 0 0 auto;
-      margin-left: 1rem;
+      flex        : 0 0 auto;
+      margin-left : 1rem;
     }
 
-    @media all and (max-width: $cit-breakpoint-medium) {
-      flex-wrap: wrap;
-      margin: 1rem 0;
+    @media all and (max-width : $cit-breakpoint-medium) {
+      flex-wrap : wrap;
+      margin    : 1rem 0;
 
       &-input,
       &-button {
-        flex: 1 1 100%;
-        margin: .5rem 0;
+        flex   : 1 1 100%;
+        margin : .5rem 0;
       }
     }
   }

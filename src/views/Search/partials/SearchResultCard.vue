@@ -82,45 +82,45 @@ export default {
 
 .cit-search-result-card {
   &__header {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size      : 1.2rem;
+    font-weight    : bold;
+    text-transform : uppercase;
   }
 
   &__body {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-    border: 0 solid $cit-light-gray;
-    border-width: 1px 0;
-    padding: 1rem 0;
+    display      : flex;
+    align-items  : center;
+    margin       : 1rem 0;
+    border       : 0 solid $cit-light-gray;
+    border-width : 1px 0;
+    padding      : 1rem 0;
   }
 
   &__meta {
-    flex: 1 1 auto;
-    font-size: .9rem;
-    line-height: 1.8;
+    flex        : 1 1 auto;
+    font-size   : .9rem;
+    line-height : 1.8;
   }
 
   &__actions {
-    flex: 0 0 auto;
+    flex : 0 0 auto;
   }
 
   &__mail,
   &__direction {
-    cursor: pointer;
-    color: $cit-dark-gray;
+    cursor : pointer;
+    color  : $cit-dark-gray;
 
     &:hover {
-      color: $cit-blue;
+      color : $cit-blue;
     }
   }
 
   &__footer {
-    font-size: .75rem;
-    display: flex;
-    align-items: center;
-    color: $cit-dark-gray;
+    font-size   : .75rem;
+    display     : flex;
+    align-items : center;
+    color       : $cit-dark-gray;
   }
 }
 </style>

@@ -123,14 +123,14 @@ export default {
 </script>
 <style lang="scss">
 .cit-landing-wizard {
-  padding: 2rem 0;
+  padding : 2rem 0;
 
   &__subtitle {
-    font-size: 2rem;
+    font-size : 2rem;
   }
 
   &__zip-input {
-    margin: 2rem 0;
+    margin : 2rem 0;
   }
 }
 </style>

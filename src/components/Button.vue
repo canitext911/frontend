@@ -44,40 +44,40 @@ export default {
 @import '~@scss/index.scss';
 
 .cit-button {
-  border-radius: 2rem;
-  cursor: pointer;
-  background: $cit-blue;
-  color: #fff;
-  padding: 0 2rem;
-  height: 3rem;
-  display: flex;
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
-  transition: $cit-transition-default;
-  outline: none;
+  border-radius   : 2rem;
+  cursor          : pointer;
+  background      : $cit-blue;
+  color           : #ffffff;
+  padding         : 0 2rem;
+  height          : 3rem;
+  display         : flex;
+  white-space     : nowrap;
+  align-items     : center;
+  justify-content : center;
+  transition      : $cit-transition-default;
+  outline         : none;
 
   &:hover,
   &:focus {
-    background-color: $cit-dark-blue;
+    background-color : $cit-dark-blue;
   }
 
   &--compact {
-    padding: 0 1rem;
-    height: 2rem;
-    background: transparent !important;
-    color: $cit-blue;
+    padding    : 0 1rem;
+    height     : 2rem;
+    background : transparent !important;
+    color      : $cit-blue;
 
     &:hover,
     &:focus {
-      color: $cit-dark-blue;
+      color : $cit-dark-blue;
     }
   }
 
   &--disabled {
-    pointer-events: none;
-    color: $cit-gray !important;
-    background-color: $cit-dark-gray;
+    pointer-events   : none;
+    color            : $cit-gray !important;
+    background-color : $cit-dark-gray;
   }
 }
 </style>

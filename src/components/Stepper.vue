@@ -41,15 +41,15 @@ export default {
 @import '~@scss/index.scss';
 
 .cit-stepper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+  position : relative;
+  overflow : hidden;
+  width    : 100%;
 
   &__carousel {
-    display: flex;
-    align-items: center;
-    will-change: transform;
-    transition: transform $cit-transition-medium;
+    display     : flex;
+    align-items : center;
+    will-change : transform;
+    transition  : transform $cit-transition-medium;
   }
 }
 </style>

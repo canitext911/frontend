@@ -121,19 +121,19 @@ export default {
 @import '~@scss/index.scss';
 
 .cit-text-input {
-  position: relative;
+  position : relative;
 
   &__element {
-    font: inherit;
-    outline: none;
-    border: 1px solid $cit-gray;
-    border-radius: 2rem;
-    width: 100%;
-    height: 3rem;
-    padding: 0 2rem;
+    font          : inherit;
+    outline       : none;
+    border        : 1px solid $cit-gray;
+    border-radius : 2rem;
+    width         : 100%;
+    height        : 3rem;
+    padding       : 0 2rem;
 
     &:focus {
-      border-color: $cit-blue;
+      border-color : $cit-blue;
     }
   }
 

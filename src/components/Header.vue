@@ -14,11 +14,12 @@ export default {
 @import '~@scss/index.scss';
 
 .cit-header {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 2rem 0;
-  color: $cit-dark-black;
-  text-transform: uppercase;
+  font-size      : 2rem;
+  font-weight    : bold;
+  text-align     : center;
+  padding        : 2rem 0;
+  color          : $cit-dark-black;
+  text-transform : uppercase;
+  user-select    : none;
 }
 </style>

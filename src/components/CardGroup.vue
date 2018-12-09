@@ -14,10 +14,10 @@ export default {
 @import '~@scss/index.scss';
 
 .cit-card-group {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 1rem -1rem;
+  display         : flex;
+  align-items     : flex-start;
+  justify-content : center;
+  flex-wrap       : wrap;
+  margin          : 1rem -1rem;
 }
 </style>
