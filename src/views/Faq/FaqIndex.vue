@@ -9,15 +9,15 @@
     </p>
     <h3>Why would I text 911?</h3>
     <p>
-      If you are in a dangerous situation where you are unable to discreetly make a phone call,
-      texting 911 could be your best option.
+      If you are in a dangerous situation where you are unable to discreetly make a phone call or
+      have a speech or hearing impairment, texting 911 would be your best option.
     </p>
     <h3>Does my carrier support texting 911?</h3>
     <p>
       The FCC requires all wireless carriers to support this service. Verizon, AT&amp;T,
       Sprint, and T-Mobile have indicated support. However, your local emergency call center
       must also have this technology deployed. You may be able to determine some of this
-      information through our search tool, but always check with your provider or call center
+      information through our website, but always check with your provider or local call center
       to confirm support.
     </p>
     <h3>Do I need an active phone plan?</h3>
@@ -27,13 +27,13 @@
     <h3>What happens if my local call center doesn't support texting 911?</h3>
     <p>
       If your text was unable to be delivered to your call center due to lack of support, you will
-      receive an immediate "bounce-back" message from your provider informing you of such. In such a
-      case, make sure to contact 911 another way.
+      receive an immediate automated "bounce-back" message from your provider informing you of such.
+      In such a case, make sure to contact 911 another way.
     </p>
     <h3>How does my location get sent if I text 911?</h3>
     <p>
       Unlike calling 911, texting 911 generally does not provide call center
-      operators with your location.
+      operators with your location, and any information provided is not as accurate.
       Be sure to indicate your location in your text message, if possible.
     </p>
     <h3>What are some limitations of text-to-911?</h3>
@@ -47,8 +47,7 @@
     <h3>Who runs this website?</h3>
     <p>
       CIT911 is an independently-run informational website and is not affiliated
-      with any government entity.
-      Our goal is to raise awareness with the hope of bettering lives.
+      with any government entity. Our goal is to raise awareness and increase public safety.
     </p>
   </ContentWrapper>
 </template>

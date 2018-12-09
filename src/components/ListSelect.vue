@@ -51,8 +51,7 @@ export default {
     transition: $cit-transition-default;
 
     &:hover:not(&--selected) {
-      border-color: $cit-gray;
-      background-color: $cit-light-gray;
+      background-color: $cit-lighter-gray;
     }
 
     &--selected {

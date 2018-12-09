@@ -56,7 +56,7 @@ export default {
     margin: 0;
     font-size: 8rem;
     text-transform: uppercase;
-    color: #000;
+    color: $cit-dark-black;
 
     animation: cit-landing-component--entrance .4s ease;
   }
@@ -64,7 +64,7 @@ export default {
   &__subheading {
     font-size: 1rem;
     font-weight: normal;
-    color: $cit-light-black;
+    color: $cit-dark-gray;
     margin-top: 1rem;
     animation: cit-landing-component--entrance .4s ease .1s backwards;
   }

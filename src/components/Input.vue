@@ -5,6 +5,7 @@
            :autofocus="isAutofocused"
            :required="isRequired"
            :name="name"
+           :aria-label="ariaLabel"
            :tabindex="tabindex"
            :value="value"
            :type="type"
@@ -32,6 +33,10 @@ export default {
     type: {
       type: String,
       default: 'text',
+    },
+    ariaLabel: {
+      type: String,
+      default: null,
     },
     tabindex: {
       type: Number,

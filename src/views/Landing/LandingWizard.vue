@@ -35,6 +35,7 @@
                type="number"
                :tabindex="-1"
                isRequired
+               ariaLabel="Enter ZIP code"
                ref="ZipInput"
                class="cit-landing-wizard__zip-input"
                @keydown.enter.native="handleSearch"

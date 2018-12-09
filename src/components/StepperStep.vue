@@ -105,8 +105,7 @@ export default {
   &__prev--disabled,
   &__next--disabled {
     pointer-events: none;
-    opacity: .5;
-    color: $cit-dark-gray !important;
+    color: $cit-gray !important;
   }
 }
 </style>

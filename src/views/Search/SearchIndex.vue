@@ -3,6 +3,7 @@
     <div class="cit-search-index__form">
       <Input v-model="search"
              ref="SearchInput"
+             ariaLabel="Search by city, county, state abbreviation, or zip code"
              @keydown.enter.native="handleSubmit"
              :placeholder="inputPlaceholder"
              class="cit-search-index__form-input"/>

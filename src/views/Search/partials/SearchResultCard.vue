@@ -13,17 +13,19 @@
         <Icon v-if="hasEmail"
               icon="mail"
               size="large"
+              title="Email Call Center Administrator"
               @click.native="handleEmail"
               class="cit-search-result-card__mail"/>
         <Icon icon="directions"
               size="large"
+              title="Get Directions to Call Center"
               @click.native="handleDirection"
               class="cit-search-result-card__direction"/>
       </div>
     </div>
     <div class="cit-search-result-card__footer">
       <Icon icon="history"/>
-      <span>
+      <span title="FCC Readiness Date">
         First available {{ item.ready_at | distanceInWordsToNow }} ago
       </span>
     </div>
