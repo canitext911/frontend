@@ -7,7 +7,7 @@
       <h2 class="cit-landing-default__subheading">
         Be prepared. Check to see if emergency texting is supported in your area.
       </h2>
-      <Button class="cit-landing-default__button" @click="handleWizardRoute">Check Now</Button>
+      <Button class="cit-landing-default__button" @click="handleWizardRoute">Check Availability</Button>
     </div>
   </div>
 </template>

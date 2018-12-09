@@ -9,9 +9,18 @@
     </div>
 
     <div class="cit-stepper-step__actions">
+
+      <!--
+           Note on tabindex:
+           this is not ideal for accessibility but required
+           currently to prevent jumping of the carousel
+           with tabbing
+       -->
       <Button
           isCompact
-          :class="['cit-stepper-step__prev', prevClassList]"
+          :isDisabled="!hasPrev"
+          :tabindex="-1"
+          class="cit-stepper-step__prev"
           @click="$emit('prev')">
         {{ prevActionText }}
       </Button>
@@ -20,7 +29,9 @@
         </span>
       <Button
           isCompact
-          :class="['cit-stepper-step__next', nextClassList]"
+          :isDisabled="!hasNext"
+          :tabindex="-1"
+          class="cit-stepper-step__next"
           @click="$emit('next')">
         {{ nextActionText }}
       </Button>
@@ -53,18 +64,6 @@ export default {
     nextActionText: {
       type: String,
       default: 'Next',
-    },
-  },
-  computed: {
-    prevClassList() {
-      return {
-        'cit-stepper-step__prev--disabled': !this.hasPrev,
-      };
-    },
-    nextClassList() {
-      return {
-        'cit-stepper-step__next--disabled': !this.hasNext,
-      };
     },
   },
 };
@@ -100,12 +99,6 @@ export default {
 
   &__action-divider {
     color: $cit-gray;
-  }
-
-  &__prev--disabled,
-  &__next--disabled {
-    pointer-events: none;
-    color: $cit-gray !important;
   }
 }
 </style>

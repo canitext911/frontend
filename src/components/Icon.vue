@@ -46,6 +46,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
   vertical-align: middle;
+  user-select: none;
 
   &--large {
     font-size: 1.5rem;

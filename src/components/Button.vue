@@ -1,7 +1,8 @@
 <template>
   <div :class="['cit-button', classList]"
-       :disabled="isDisabled"
-       @click="$emit('click')">
+       :tabindex="tabindex"
+       @keydown.enter="handleClick"
+       @click="handleClick">
     <slot/>
   </div>
 </template>
@@ -17,12 +18,24 @@ export default {
       type: Boolean,
       default: false,
     },
+    tabindex: {
+      type: Number,
+      default: 0,
+    },
   },
   computed: {
     classList() {
       return {
         'cit-button--compact': this.isCompact,
+        'cit-button--disabled': this.isDisabled,
       };
+    },
+  },
+  methods: {
+    handleClick() {
+      if (!this.isDisabled) {
+        this.$emit('click');
+      }
     },
   },
 };
@@ -42,6 +55,12 @@ export default {
   align-items: center;
   justify-content: center;
   transition: $cit-transition-default;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $cit-dark-blue;
+  }
 
   &--compact {
     padding: 0 1rem;
@@ -49,13 +68,16 @@ export default {
     background: transparent !important;
     color: $cit-blue;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $cit-dark-blue;
     }
   }
 
-  &:hover {
-    background-color: $cit-dark-blue;
+  &--disabled {
+    pointer-events: none;
+    color: $cit-gray !important;
+    background-color: $cit-dark-gray;
   }
 }
 </style>

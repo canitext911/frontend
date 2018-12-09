@@ -2,6 +2,7 @@
   <div class="cit-list-select">
     <div :class="['cit-list-select__item', {'cit-list-select__item--selected': isSelected(key)}]"
          v-for="(item, key) in items"
+         tabindex="-1"
          @click="handleSelect(key)"
          :key="key">
       <slot :item="item"/>
@@ -49,8 +50,11 @@ export default {
     margin: 1rem 0;
     cursor: pointer;
     transition: $cit-transition-default;
+    user-select: none;
+    outline: none;
 
-    &:hover:not(&--selected) {
+    &:hover:not(&--selected),
+    &:focus:not(&--selected) {
       background-color: $cit-lighter-gray;
     }
 
