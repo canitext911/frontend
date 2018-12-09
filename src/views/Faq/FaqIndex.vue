@@ -51,7 +51,7 @@
       We're open-source!
       <a target="_blank"
          href="https://github.com/CanIText911">
-        Check out this project on Github.
+        Contributions are welcome.
       </a>
     </p>
   </ContentWrapper>
