@@ -10,21 +10,26 @@ export const ApiEndpointTypes = {
 };
 
 export const ApiEndpoints = {
-  [ApiEndpointTypes.lookup.natural]: 'lookup?search=',
+  [ApiEndpointTypes.lookup.natural]: 'lookup',
   [ApiEndpointTypes.lookup.zip]: 'lookup/by-zip/',
-  [ApiEndpointTypes.lookup.suggest]: 'lookup/suggest?search=',
+  [ApiEndpointTypes.lookup.suggest]: 'lookup/suggest',
   [ApiEndpointTypes.location]: 'location',
 };
 
 /**
  * Fetch from API
  *
- * @param endpoint
- * @param params
+ * @param String endpoint
+ * @param Object params
+ * @param AbortController signal
  * @returns {Promise<any>}
  */
-export async function get(endpoint = '', params = {}) {
-  const response = await fetch(`${ApiPrefix}${endpoint}${new URLSearchParams(params)}`);
+export async function get(endpoint = '', params = {}, signal = null) {
+  const response = await fetch(`${ApiPrefix}${endpoint}?${new URLSearchParams(params)}`, {
+    method: 'get',
+    signal,
+  });
+
   const json = await response.json();
   return json;
 }
