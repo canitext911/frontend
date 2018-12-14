@@ -10,7 +10,7 @@
         </SubHeader>
         <p v-if="hasMoreResults">
           <small>
-            Showing {{ visibleResults }}/{{ totalResults }}
+            Showing {{ visibleResults.toLocaleString() }}/{{ totalResults.toLocaleString() }}
             result{{ totalResults !== 1 ? 's' : '' }}
           </small>
         </p>
