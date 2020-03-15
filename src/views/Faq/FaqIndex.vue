@@ -46,8 +46,14 @@
     </p>
     <h3>Who runs this website?</h3>
     <p>
-      CANiTEXT911 is an independently-run informational website and is not affiliated
-      with any government entity. Our hope is to raise awareness and increase public safety.
+      CANiTEXT911 is an independently-run informational website by
+      <a href="https://diglactic.com"
+         target="_blank">
+        Diglactic
+      </a>
+      and is not affiliated with any government entity. Our hope is to raise awareness and increase public safety.
+    </p>
+    <p>
       We're open-source!
       <a target="_blank"
          href="https://github.com/CanIText911">
