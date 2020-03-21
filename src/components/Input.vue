@@ -131,6 +131,7 @@ export default {
     width         : 100%;
     height        : 3rem;
     padding       : 0 2rem;
+    appearance    : none;
 
     &:focus {
       border-color : $cit-blue;
