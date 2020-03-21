@@ -16,6 +16,7 @@ Vue.use(Meta);
 
 const router = new Router({
   linkActiveClass: 'cit-link--active',
+  mode: 'history',
   routes: [
     {
       path: '/',

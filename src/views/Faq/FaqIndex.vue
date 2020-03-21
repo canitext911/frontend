@@ -51,7 +51,8 @@
          target="_blank">
         Diglactic
       </a>
-      and is not affiliated with any government entity. Our hope is to raise awareness and increase public safety.
+      and is not affiliated with any government entity. Our hope is to raise awareness and increase
+      public safety.
     </p>
     <p>
       We're open-source!

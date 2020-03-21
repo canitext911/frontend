@@ -21,3 +21,8 @@ Thanks for considering contributing! Please open an issue prior to submitting an
 ## License
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+---
+
+*Cross-Device Testing Provided By* <br>
+[<img src="https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" width="128" alt="BrowserStack logo">](http://browserstack.com)

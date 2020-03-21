@@ -1,8 +1,8 @@
 {
   "name": "canitext911.us",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Sheng-Liang Slogar <slogar.sheng@gmail.com>",
+  "description": "",
+  "author": "Sheng-Liang Slogar <sheng@diglactic.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -12,12 +12,6 @@
     "lint": "eslint --ext .js,.vue src test/unit",
     "fix": "eslint --ext .js,.vue src test/unit --fix",
     "build": "node build/build.js"
-  },
-  "dependencies": {
-    "date-fns": "^1.29.0",
-    "vue": "^2.6.11",
-    "vue-meta": "^1.5.6",
-    "vue-router": "^3.1.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -36,6 +30,7 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "date-fns": "^1.29.0",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^11.3.0",
     "eslint-friendly-formatter": "^3.0.0",
@@ -63,10 +58,13 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue": "^2.6.11",
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.3.0",
+    "vue-meta": "^1.5.6",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.6.11",
+    "vue-router": "^3.1.6",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
