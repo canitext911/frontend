@@ -49,6 +49,8 @@ export default {
           // just none at all or one with a value
           ...(this.search !== '' ? { search: this.search } : {}),
         },
+      }).catch(() => {
+        // Catch duplicate route errors for repeated submits
       });
     },
     resizeHandler() {
