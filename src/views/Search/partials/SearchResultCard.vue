@@ -7,7 +7,10 @@
         <br>
         {{ item.city }}, {{ item.state }} {{ item.zip }}
         <br>
-        {{ item.county }} County
+        {{ item.county }}
+        <template v-if="shouldDisplayCountySuffix">
+          County
+        </template>
       </div>
       <div class="cit-search-result-card__actions">
         <Icon v-if="hasEmail"
@@ -48,6 +51,9 @@ export default {
     address() {
       return `${this.item.address} ${this.item.city}, ${this.item.state} ${this.item.zip}`;
     },
+    shouldDisplayCountySuffix() {
+      return this.item.county.toLowerCase().indexOf('county') < 0;
+    }
   },
   methods: {
     handleDirection() {
