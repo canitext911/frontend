@@ -3,7 +3,7 @@
     <div class="cit-search-index__form">
       <Input v-model="search"
              ref="SearchInput"
-             ariaLabel="Search by city, county, state abbreviation, or zip code"
+             ariaLabel="Search by city, county, state abbreviation, or ZIP Code"
              @keydown.enter.native="handleSubmit"
              :placeholder="inputPlaceholder"
              class="cit-search-index__form-input"/>
@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     inputPlaceholder() {
-      return this.windowWidth > 600 ? 'Search by city, county, state abbreviation, or zip code...' : 'Search...';
+      return this.windowWidth > 600 ? 'Search by city, county, state abbreviation, or ZIP Code...' : 'Search...';
     },
   },
   methods: {

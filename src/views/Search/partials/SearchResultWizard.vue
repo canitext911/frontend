@@ -31,7 +31,7 @@
       <template slot="subtitle">
         <template v-if="hasSearchResults">
           We found some call centers using your search criteria that support 911 texting.
-          Make sure your county or zip code matches a listed result.
+          Make sure your county or ZIP Code matches a listed result.
         </template>
         <template v-else>
           We couldn't find any call centers using your search criteria,

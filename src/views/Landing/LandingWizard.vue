@@ -25,18 +25,18 @@
         </ListSelect>
       </StepperStep>
       <StepperStep class="cit-landing-wizard__step"
-                   title="Enter Your Zip Code"
+                   title="Enter Your ZIP Code"
                    nextActionText="Check Availability"
                    :hasNext="isFormValid"
                    hasPrev
                    @prev="handlePrevStep"
                    @next="handleSearch">
-        <Input placeholder="Enter your ZIP code..."
+        <Input placeholder="Enter your ZIP Code..."
                type="number"
                :tabindex="-1"
                :min="0"
                :max="99999"
-               ariaLabel="Enter ZIP code"
+               ariaLabel="Enter ZIP Code"
                ref="ZipInput"
                class="cit-landing-wizard__zip-input"
                @keydown.enter.native="handleSearch"
