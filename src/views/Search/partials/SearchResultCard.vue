@@ -53,7 +53,7 @@ export default {
     },
     shouldDisplayCountySuffix() {
       return this.item.county.toLowerCase().indexOf('county') < 0;
-    }
+    },
   },
   methods: {
     handleDirection() {
